@@ -13,5 +13,4 @@ spec:
         name: argo-helm
       version: '3.27.1'
   interval: 1m0s
-  releaseName: argo-cd
   values: {}
