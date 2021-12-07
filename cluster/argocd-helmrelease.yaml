@@ -13,5 +13,5 @@ spec:
         name: argocd-helm
       version: '>3.0.0'
   interval: 1m0s
-  releaseName: argocd
+  releaseName: argo-cd
   values: {}
