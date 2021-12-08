@@ -13,4 +13,7 @@ spec:
         name: argo-helm
       version: '3.27.1'
   interval: 1m0s
-  values: {}
+  values:
+    global:
+      image:
+        repository: alinbalutoiu/argocd
