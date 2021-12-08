@@ -17,3 +17,6 @@ spec:
     global:
       image:
         repository: alinbalutoiu/argocd
+    server:
+      service:
+        type: NodePort
