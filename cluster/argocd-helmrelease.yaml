@@ -17,7 +17,6 @@ spec:
     global:
       image:
         repository: alinbalutoiu/argocd
-        tag: "v2.0.5"
     server:
       service:
         type: NodePort
