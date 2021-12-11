@@ -24,8 +24,12 @@ spec:
         enabled: true
         hosts:
         - argocd.mchum.fun
-        extraArgs:
-        - --insecure
+        tls:
+        - secretName: argocd-server-tls
+          hosts:
+          - argocd.mchum.fun
+      extraArgs:
+      - --insecure
       certificate:
         enabled: true
         domain: argocd.mchum.fun
