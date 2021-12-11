@@ -17,6 +17,8 @@ spec:
     global:
       image:
         repository: alinbalutoiu/argocd
+    apiVersionOverrides:
+      ingress: networking.k8s.io/v1
     server:
       ingress:
         enabled: true
