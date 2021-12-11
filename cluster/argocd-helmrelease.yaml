@@ -26,7 +26,5 @@ spec:
         - argocd.mchum.fun
         annotations:
           traefik.ingress.kubernetes.io/redirect-permanent: "true"
-          traefik.ingress.kubernetes.io/redirect-regex: ^(.*)argocd.mchum.fun/(.*)
-          traefik.ingress.kubernetes.io/redirect-replacement: https://argocd.mchum.fun/$2
-      extraArgs:
-      - --insecure
+          ingress.kubernetes.io/protocol: https
+        https: true
