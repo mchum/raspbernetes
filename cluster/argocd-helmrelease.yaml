@@ -24,3 +24,5 @@ spec:
         enabled: true
         hosts:
         - argocd.mchum.fun
+      extraArgs:
+      - --insecure
