@@ -20,11 +20,16 @@ spec:
     apiVersionOverrides:
       ingress: networking.k8s.io/v1
     server:
+      certificate:
+        enabled: true
+        domain: argocd.mchum.fun
+        issuer:
+          kind: ClusterIssuer
+          name: selfsigned-clusterissuer
       ingress:
         enabled: true
         ingressClassName: traefik
         annotations:
-          traefik.ingress.kubernetes.io/redirect-entry-point: https
           traefik.ingress.kubernetes.io/redirect-permanent: "true"
         hosts:
         - argocd.mchum.fun
@@ -33,10 +38,4 @@ spec:
           hosts:
           - argocd.mchum.fun
       extraArgs:
-      - --insecure
-      certificate:
-        enabled: true
-        domain: argocd.mchum.fun
-        issuer:
-          kind: ClusterIssuer
-          name: selfsigned-clusterissuer
+      - --insecure  # Ingress handles and terminates SSL
