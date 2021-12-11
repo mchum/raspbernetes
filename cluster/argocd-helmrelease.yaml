@@ -11,13 +11,12 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: argo-helm
-      version: '3.27.1'
+      version: '3.11.5'
   interval: 1m0s
   values:
     global:
       image:
         repository: alinbalutoiu/argocd
-        tag: linux-arm64-v2.1.7
     server:
       ingress:
         enabled: true
