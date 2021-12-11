@@ -22,3 +22,4 @@ spec:
         enabled: true
         hosts:
         - argocd.mchum.fun
+        https: true
