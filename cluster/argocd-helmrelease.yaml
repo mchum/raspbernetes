@@ -27,4 +27,3 @@ spec:
         annotations:
           traefik.ingress.kubernetes.io/redirect-permanent: "true"
           ingress.kubernetes.io/protocol: https
-        https: true
