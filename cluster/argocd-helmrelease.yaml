@@ -24,5 +24,7 @@ spec:
         enabled: true
         hosts:
         - argocd.mchum.fun
+        annotations:
+          traefik.ingress.kubernetes.io/redirect-entry-point: https
       extraArgs:
       - --insecure
