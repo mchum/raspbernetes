@@ -26,5 +26,7 @@ spec:
         - argocd.mchum.fun
         annotations:
           traefik.ingress.kubernetes.io/redirect-entry-point: https
+          ingress.kubernetes.io/ssl-redirect: "true"
+          ingress.kubernetes.io/force-ssl-redirect: "true"
       extraArgs:
       - --insecure
