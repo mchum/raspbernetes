@@ -22,6 +22,10 @@ spec:
     server:
       ingress:
         enabled: true
+        ingressClassName: traefik
+        annotations:
+          traefik.ingress.kubernetes.io/redirect-entry-point: https
+          traefik.ingress.kubernetes.io/redirect-permanent: "true"
         hosts:
         - argocd.mchum.fun
         tls:
