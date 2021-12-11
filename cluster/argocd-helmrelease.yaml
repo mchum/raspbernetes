@@ -25,7 +25,8 @@ spec:
         hosts:
         - argocd.mchum.fun
         annotations:
-          traefik.ingress.kubernetes.io/redirect-entry-point: https
           traefik.ingress.kubernetes.io/redirect-permanent: "true"
+          traefik.ingress.kubernetes.io/redirect-regex: "^http://argocd.mchum.fun/(.*)"
+          traefik.ingress.kubernetes.io/redirect-replacement: "https://argocd.mchum.fun/$1"
       extraArgs:
       - --insecure
