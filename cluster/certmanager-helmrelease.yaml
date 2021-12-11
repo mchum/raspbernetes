@@ -11,6 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: jetstack
+        namespace: default
       version: 'v1.6.1'
   interval: 1m0s
   releaseName: cert-manager
