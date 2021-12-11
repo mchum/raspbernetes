@@ -25,5 +25,5 @@ spec:
         hosts:
         - argocd.mchum.fun
         annotations:
+          traefik.ingress.kubernetes.io/router.tls.: "true"
           traefik.ingress.kubernetes.io/redirect-permanent: "true"
-          ingress.kubernetes.io/protocol: https
