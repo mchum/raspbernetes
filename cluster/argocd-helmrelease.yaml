@@ -18,8 +18,5 @@ spec:
       image:
         repository: alinbalutoiu/argocd
     server:
-      ingress:
-        enabled: true
-        hosts:
-        - argocd.mchum.fun
-        https: true
+      service:
+        type: NodePort
