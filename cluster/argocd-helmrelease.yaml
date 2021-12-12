@@ -28,7 +28,7 @@ spec:
           name: selfsigned-clusterissuer
       ingress:
         enabled: true
-        ingressClassName: traefik
+        https: true
         annotations:
           traefik.ingress.kubernetes.io/router.middlewares: "default-https-redirect@kubernetescrd"
         pathType: ImplementationSpecific
