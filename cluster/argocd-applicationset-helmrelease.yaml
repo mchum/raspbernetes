@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: argocd-applicationset
+  namespace: argo
+spec:
+  chart:
+    spec:
+      chart: argocd-applicationset
+      sourceRef:
+        kind: HelmRepository
+        name: argo-helm
+      version: '1.7.0'
+  interval: 1m0s
+  values: {}

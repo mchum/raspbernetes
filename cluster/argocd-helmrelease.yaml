@@ -16,9 +16,13 @@ spec:
   values:
     global:
       image:
-        repository: alinbalutoiu/argocd
+        repository: alinbalutoiu/argocd  # ARM64 build of ArgoCD
     apiVersionOverrides:
-      ingress: networking.k8s.io/v1
+      ingress: networking.k8s.io/v1 
+    configs:
+      repositories:
+        raspbernetes:
+          url: https://github.com/mchum/raspbernetes/
     server:
       certificate:
         enabled: true
@@ -39,4 +43,4 @@ spec:
           hosts:
           - argocd.mchum.fun
       extraArgs:
-      - --insecure
+      - --insecure  # TLS terminated at ingress, use http backend
