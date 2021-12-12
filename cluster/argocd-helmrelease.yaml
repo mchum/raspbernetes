@@ -30,7 +30,7 @@ spec:
         enabled: true
         ingressClassName: traefik
         annotations:
-          traefik.ingress.kubernetes.io/router.tls: "true"
+          traefik.ingress.kubernetes.io/router.middlewares: "https-redirect-middleware@kubernetescrd"
         hosts:
         - argocd.mchum.fun
         tls:
