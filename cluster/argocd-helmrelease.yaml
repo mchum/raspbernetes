@@ -34,9 +34,3 @@ spec:
         pathType: ImplementationSpecific
         hosts:
         - argocd.mchum.fun
-        tls:
-        - secretName: argocd-server-tls
-          hosts:
-          - argocd.mchum.fun
-      extraArgs:
-      - --insecure  # Ingress handles and terminates SSL
