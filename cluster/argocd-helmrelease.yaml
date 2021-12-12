@@ -28,9 +28,9 @@ spec:
           name: selfsigned-clusterissuer
       ingress:
         enabled: true
-        https: true
         annotations:
           traefik.ingress.kubernetes.io/router.middlewares: "default-https-redirect@kubernetescrd"
+          traefik.ingress.kubernetes.io/router.tls: "true"
         pathType: ImplementationSpecific
         hosts:
         - argocd.mchum.fun
@@ -38,3 +38,5 @@ spec:
         - secretName: argocd-server-tls
           hosts:
           - argocd.mchum.fun
+      extraArgs:
+      - --insecure
