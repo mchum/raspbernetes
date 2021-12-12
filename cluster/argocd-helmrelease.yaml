@@ -28,6 +28,7 @@ spec:
           name: selfsigned-clusterissuer
       ingress:
         enabled: true
+        ingressClassName: traefik
         hosts:
         - argocd.mchum.fun
         tls:
