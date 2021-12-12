@@ -21,7 +21,7 @@ spec:
       ingress: networking.k8s.io/v1
     server:
       certificate:
-        enabled: false
+        enabled: true
         domain: argocd.mchum.fun
         issuer:
           kind: ClusterIssuer
@@ -34,3 +34,7 @@ spec:
         pathType: ImplementationSpecific
         hosts:
         - argocd.mchum.fun
+        tls:
+        - secretName: argocd-server-tls
+          hosts:
+          - argocd.mchum.fun
