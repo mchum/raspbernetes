@@ -21,7 +21,7 @@ spec:
       ingress: networking.k8s.io/v1
     server:
       certificate:
-        enabled: true
+        enabled: false
         domain: argocd.mchum.fun
         issuer:
           kind: ClusterIssuer
@@ -34,3 +34,5 @@ spec:
         pathType: ImplementationSpecific
         hosts:
         - argocd.mchum.fun
+      extraArgs:
+      - --insecure  # Ingress handles and terminates SSL
