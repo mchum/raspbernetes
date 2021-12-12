@@ -29,6 +29,8 @@ spec:
       ingress:
         enabled: true
         ingressClassName: traefik
+        annotations:
+          traefik.ingress.kubernetes.io/router.tls: "true"
         hosts:
         - argocd.mchum.fun
         tls:
