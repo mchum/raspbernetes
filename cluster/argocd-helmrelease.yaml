@@ -28,9 +28,6 @@ spec:
           name: selfsigned-clusterissuer
       ingress:
         enabled: true
-        ingressClassName: traefik
-        annotations:
-          traefik.ingress.kubernetes.io/redirect-permanent: "true"
         hosts:
         - argocd.mchum.fun
         tls:
