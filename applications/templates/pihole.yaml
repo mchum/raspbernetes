@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pihole
+spec:
+  destination:
+    namespace: default
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    repoURL: https://mojo2600.github.io/pihole-kubernetes/
+    targetRevision: 2.5.3
+    chart: pihole
+    helm:
+      version: v3
+      values: |
+{{ .Files.Get "conf/values.pihole.yaml" | nindent 8 }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

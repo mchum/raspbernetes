@@ -1,0 +1,26 @@
+dnsHostPort:
+  enabled: true
+serviceDns:
+  type: NodePort
+  port: 53
+serviceWeb:
+  http:
+    enabled: true
+  https:
+    enabled: false
+ingress:
+  enabled: true
+persistentVolumeClaim:
+  enabled: false
+DNS1: "1.1.1.1"
+DNS2: "1.0.0.1"
+adminPassword: ""
+admin:
+  existingSecret: application-secrets
+  passwordKey: piholePassword
+podDnsConfig:
+  enabled: true
+  nameservers:
+  - 127.0.0.1
+  - 1.1.1.1
+  - 1.0.0.1
