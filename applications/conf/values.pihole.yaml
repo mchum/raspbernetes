@@ -8,6 +8,7 @@ serviceWeb:
     enabled: true
   https:
     enabled: false
+virtualHost: pihole.mchum.fun
 ingress:
   enabled: true
   hosts:
