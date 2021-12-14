@@ -14,3 +14,7 @@ spec:
     path: applications
     repoURL: https://github.com/mchum/raspbernetes
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
