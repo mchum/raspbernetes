@@ -1,0 +1,28 @@
+{{- range $name, $values := .Values.applications.helm }}
+{{- if ( default true $values.enabled ) }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ quote $name }}
+spec:
+  destination:
+    namespace: {{ default $.Values.default.destination.namespace $values.namespace }}
+    server: {{ default $.Values.default.destination.server $values.destination }}
+  project: {{ default $.Values.default.project $values.project }}
+  source:
+    repoURL: {{ required "The repo url of the helm chart" $values.repoUrl }}
+    targetRevision: {{ required "The target revision to deploy" $values.targetRevision | quote }}
+    chart: {{ default $name $values.chartName }}
+    helm:
+      version: v3
+      values: |
+{{ $.Files.Get ( default ( printf "conf/values.%s.yaml" $name ) $values.valuesFile ) | nindent 8 }}
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
+{{- end }}
+{{- end }}

@@ -1,3 +1,11 @@
-spec:
+default:
+  project: default
   destination:
+    namespace: default
     server: https://kubernetes.default.svc
+
+applications:
+  helm:
+    pihole:
+      repoUrl: https://mojo2600.github.io/pihole-kubernetes/
+      targetRevision: 2.5.3
