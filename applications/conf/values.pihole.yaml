@@ -10,6 +10,8 @@ serviceWeb:
     enabled: false
 ingress:
   enabled: true
+  hosts:
+  - pihole.mchum.fun
 persistentVolumeClaim:
   enabled: false
 DNS1: "1.1.1.1"
