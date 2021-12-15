@@ -9,8 +9,6 @@ minecraftServer:
   levelSeed: ""
   gameMode: survival
   memory: 1024M
-  serviceType: NodePort
-  nodePort: 36463
 resources:
   requests:
     memory: 2048Mi
