@@ -8,7 +8,7 @@ minecraftServer:
   ops: DootMC
   levelSeed: ""
   gameMode: survival
-  memory: 2048Mi
+  memory: 1024M
   serviceType: NodePort
   nodePort: 36463
 resources:
