@@ -1,0 +1,18 @@
+imageTag: java8-multiarch
+minecraftServer:
+  eula: true
+  type: VANILLA
+  difficulty: normal
+  maxPlayers: 10
+  whitelist:
+  - DootMC
+  ops:
+  - DootMC
+  levelSeed: ""
+  gameMode: survival
+  memory: 2048Mi
+  serviceType: NodePort
+  nodePort: 36463
+resources:
+  requests:
+    memory: 2048Mi

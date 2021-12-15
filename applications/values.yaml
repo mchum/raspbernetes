@@ -9,3 +9,6 @@ applications:
     pihole:
       repoUrl: https://mojo2600.github.io/pihole-kubernetes/
       targetRevision: 2.5.3
+    minecraft:
+      repoUrl: https://itzg.github.io/minecraft-server-charts/
+      targetRevision: 3.6.1
