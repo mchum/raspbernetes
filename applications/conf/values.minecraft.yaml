@@ -8,11 +8,8 @@ minecraftServer:
   ops: DootMC
   levelSeed: ""
   gameMode: survival
-  memory: 2000M
+  memory: 2G
 resources:
-  limits:
-    memory: 2048Mi
-    cpu: 2
   requests:
-    memory: 2048Mi
+    memory: 1Gi
     cpu: 2
