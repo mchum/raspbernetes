@@ -1,5 +1,5 @@
 {{- range $name, $values := .Values.applications.helm }}
-{{- if ( default true $values.enabled ) }}
+{{- if eq ( include "helpers.enabledDefaultTrue" $values ) "true" }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
