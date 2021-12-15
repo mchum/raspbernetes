@@ -1,4 +1,4 @@
-imageTag: java8-multiarch
+imageTag: latest
 minecraftServer:
   eula: true
   type: VANILLA
