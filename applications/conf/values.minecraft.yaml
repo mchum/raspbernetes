@@ -4,10 +4,8 @@ minecraftServer:
   type: VANILLA
   difficulty: normal
   maxPlayers: 10
-  whitelist:
-  - DootMC
-  ops:
-  - DootMC
+  whitelist: DootMC
+  ops: DootMC
   levelSeed: ""
   gameMode: survival
   memory: 2048Mi
