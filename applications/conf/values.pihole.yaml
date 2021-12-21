@@ -15,6 +15,7 @@ ingress:
   - pihole.mchum.fun
 adlists:
 - https://raw.githubusercontent.com/ookangzheng/dbl-oisd-nl/master/dbl.txt
+- https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
 regex:
 - ^ad([sxv]?[0-9]*|system)[_.-]([^.[:space:]]+\.){1,}|[_.-]ad([sxv]?[0-9]*|system)[_.-]
 - ^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]
