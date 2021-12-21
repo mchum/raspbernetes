@@ -2,7 +2,7 @@ dnsHostPort:
   enabled: true
 serviceDns:
   type: NodePort
-  port: 53
+  nodePort: 53
 serviceWeb:
   http:
     enabled: true
