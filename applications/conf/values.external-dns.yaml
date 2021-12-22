@@ -1,0 +1,11 @@
+interval: 5m
+txtPrefix: "k8s."
+sources:
+- ingress
+policy: sync
+resources:
+  requests:
+    memory: 100Mi
+    cpu: 25m
+  limits:
+    memory: 250 Mi

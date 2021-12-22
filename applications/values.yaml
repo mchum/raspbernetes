@@ -14,5 +14,6 @@ applications:
       repoUrl: https://itzg.github.io/minecraft-server-charts/
       targetRevision: 3.6.1
     external-dns:
+      enabled: false
       repoUrl: https://kubernetes-sigs.github.io/external-dns/
       targetRevision: 1.7.0
